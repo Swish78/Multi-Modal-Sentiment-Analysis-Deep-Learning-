@@ -56,7 +56,7 @@ class MultiModalSentimentAnalyzer:
         mfccs_mean = np.mean(mfccs, axis=1)
         
         # Simple rule-based scoring using MFCC values
-        # This is a very basic approach - in real applications you'd want a trained model
+        # This is a very basic approach
         energy = np.mean(mfccs_mean)
         normalized_score = np.tanh(energy)  # Map to [-1, 1]
         
